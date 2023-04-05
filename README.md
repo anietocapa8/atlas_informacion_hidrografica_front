@@ -1,14 +1,26 @@
-# atlas_informacion_hidrografica_front
-REPOSITORIO ANÁLISIS DE LA INFORMACIÓN HIDROMETEOROLÓGICA RECOPILADA A PARTIR DE FUENTES SECUNDARIAS Y LA DESCRIPCIÓN DE LA METODOLOGÍA EMPLEADA PARA LA IDENTIFICACIÓN DE LOS PUNTOS DE MEDICIÓN SELECCIONADOS
+# sipsder
 
-### Colaboradores ✒️
-* **Arquitecto:** Ing. William Vigoya
-* **Desarrollador:** Ing. Catalina Moreno
-* **Desarrollador:** Ing. Felipe Cruz
-* **Scrum:** Ing. Alexander Diaz
+## Project setup
+```
+npm install
+```
 
-### Version 📌
- * _1.0.0_
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-### Licencia 📄
-* Universidad Nacional de Colombia
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your unit tests
+```
+npm run test:unit
+```
+
+### Run your end-to-end tests
+```
+npm run test:e2e
+```
