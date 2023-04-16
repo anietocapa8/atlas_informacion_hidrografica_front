@@ -8,6 +8,9 @@ const Home = () => import('../components/Home.vue')
 import store from '../store'
 import GeneralRouter from '../components/GeneralRouter'
 
+// For Atlas UN
+const AtlasUN = () => import('../components/views/atlas-un/AtlasUN.vue')
+
 // For User
 const Registration = () => import('../components/views/user/Registration.vue')
 const Profile = () => import('../components/views/user/Profile.vue')
@@ -1138,7 +1141,12 @@ const router = new Router({
                 ]
             }
         ]
-    },]
+    },
+    {
+        path: '/atlas-un',
+        component: AtlasUN,
+        name: 'AtlasUN'
+    }]
 })
 
 //Interceptor for count pages
@@ -1147,7 +1155,9 @@ router.beforeEach((to, from, next) => {
 
     if(to.name === 'Logout'){
         next(); 
-    } else {
+    }else if (to.name === 'AtlasUN'){
+        toPath(next, to.path);
+    }else {
         var path =  to.path
         //Check page access permissions 
         if (localStorage.getItem('authenticated')) {
@@ -1163,7 +1173,7 @@ router.beforeEach((to, from, next) => {
             toPath(next, path);
             return
         }
-        toHome(next, path); 
+        toHome(next, path);   
     }
 });
 

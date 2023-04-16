@@ -1,5 +1,24 @@
 const messages = {
     en: {
+        atlasun: {
+            title: 'DISPLAY OF HYDROMETEOROLOGICAL DATA',
+            estaciones: 'STATIONS',
+            muestreo: 'SAMPLING',
+            historico: 'HISTORY',
+            dashboard: 'DASHBOARD',
+            estacionesLabels:{
+                title:'STATION DESCRIPTION'
+            },
+            muestreoLabels:{
+                title:'SAMPLING DATA'
+            },
+            historicoLabels:{
+                title:'HISTORY'
+            },
+            dashboardLabels:{
+                title:'DASHBOARD'
+            }
+        },
         visit: {
             year: 'Year',
             month: 'Month',
@@ -3603,6 +3622,25 @@ const messages = {
         }
     },
     es: {
+        atlasun: {
+            title: 'VISUALIZACIÓN DE DATOS HIDROMETEOROLÓGICOS',
+            estaciones: 'ESTACIONES',
+            muestreo: 'MUESTREO',
+            historico: 'HISTÓRICO',
+            dashboard: 'DASHBOARD',
+            estacionesLabels:{
+                title:'DESCRIPCIÓN DE LA ESTACIÓN'
+            },
+            muestreoLabels:{
+                title:'DATOS DE MUESTREO'
+            },
+            historicoLabels:{
+                title:'HISTÓRICO'
+            },
+            dashboardLabels:{
+                title:'DASHBOARD'
+            }
+        },
         visit: {
             year: 'Año',
             month: 'Mes',
