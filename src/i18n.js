@@ -6,17 +6,44 @@ const messages = {
             muestreo: 'SAMPLING',
             historico: 'HISTORY',
             dashboard: 'DASHBOARD',
+            nota: 'NOTE',
+            descargar: 'DOWNLOAD',
+            exportar: 'EXPORT',
             estacionesLabels:{
-                title:'STATION DESCRIPTION'
+                title:'STATION DESCRIPTION',
+                seleccion:'Select Station:',
+                elementos:'Installed Elements:',
+                muestreo:'Sampling Frequency:',
+            },
+            estacionesTexts:{
+                muestreo:'Time unit subject to specification.',
+                nota:'In this section, information related to data and information related to installed elements, sampling periodicities, between others, must be consigned.'
             },
             muestreoLabels:{
-                title:'SAMPLING DATA'
+                title:'SAMPLING DATA',
+                fechaInicio:'Start Date',
+                fechaFin:'End Date',
+                ordenamiento:'Ordering'
+            },
+            muestreoTexts:{
+                nota:'Data by ascending date, of the samplings carried out, as well as their on-site verifications made by the University personnel.'
             },
             historicoLabels:{
-                title:'HISTORY'
+                title:'HISTORY',
+                fechaInicio:'Start Date',
+                fechaFin:'End Date'
+            },
+            historicoTexts:{
+                nota:'The information system must have loaded the history of aproximated xx past for it to be consulted by date range and with the possibility to download.'
             },
             dashboardLabels:{
-                title:'DASHBOARD'
+                title:'DASHBOARD',
+                fechaInicio:'Start Date',
+                fechaFin:'End Date',
+                analisis:'ANALYSIS TYPE'
+            },
+            dashboardTexts:{
+                nota:'Users will be able to see all recolected information graphically.'
             }
         },
         visit: {
@@ -3628,17 +3655,44 @@ const messages = {
             muestreo: 'MUESTREO',
             historico: 'HISTÓRICO',
             dashboard: 'DASHBOARD',
+            nota: 'NOTA',
+            descargar: 'DESCARGAR',
+            exportar: 'EXPORTAR',
             estacionesLabels:{
-                title:'DESCRIPCIÓN DE LA ESTACIÓN'
+                title:'DESCRIPCIÓN DE LA ESTACIÓN',
+                seleccion:'Seleccione Estación:',
+                elementos:'Elementos Instalados:',
+                muestreo:'Frecuencia de Muestreo:',
+            },
+            estacionesTexts:{
+                muestreo:'Unidad de tiempo sujeto a especificación.',
+                nota:'En esta sección deberá ir consignada la información referente a datos e información relacionada con los elementos instalados, las periodicidades de muestreo, entre otros.'
             },
             muestreoLabels:{
-                title:'DATOS DE MUESTREO'
+                title:'DATOS DE MUESTREO',
+                fechaInicio:'Fecha Inicio',
+                fechaFin:'Fecha Fin',
+                ordenamiento:'Ordenamiento'
+            },
+            muestreoTexts:{
+                nota:'Datos por fecha ascendente, de los muestreos realizados, así como sus verificaciones in situ realizadas por el personal de la Universidad.'
             },
             historicoLabels:{
-                title:'HISTÓRICO'
+                title:'HISTÓRICO',
+                fechaInicio:'Fecha Inicio',
+                fechaFin:'Fecha Fin'
+            },
+            historicoTexts:{
+                nota:'El sistema de información deberá tener cargado el histórico de aproximadamente xx anteriores para ser consultado en rango de fecha y con posibilidad de ser descargado.'
             },
             dashboardLabels:{
-                title:'DASHBOARD'
+                title:'DASHBOARD',
+                fechaInicio:'Fecha Inicio',
+                fechaFin:'Fecha Fin',
+                analisis:'TIPO DE ANÁLISIS'
+            },
+            dashboardTexts:{
+                nota:'Los usuarios podrán ver la información de forma gráfica o alfanumérica toda la información recolectada dentro del proyecto.'
             }
         },
         visit: {
