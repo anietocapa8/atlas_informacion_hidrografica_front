@@ -37,7 +37,7 @@ export default {
     },
     doResize(event) {
       if (!this.isResizing) return;
-      const leftSize = Math.min(event.clientX,window.innerWidth/3)
+      const leftSize = Math.min(event.clientX,window.innerWidth)
       this.leftWidth = leftSize;
       this.rightWidth = window.innerWidth - leftSize;
     },
