@@ -149,7 +149,7 @@ export default {
                     referenceScale: 5e6,
                 };
 
-                const LayerNasa = new GeoJSONLayer({
+                const layerNasa = new GeoJSONLayer({
                     url: "https://www.arcgis.com/sharing/rest/content/items/62be85dca8de4456bee00607138474f8/data",
                     timeInfo: {
                         startField: "date",
@@ -166,7 +166,7 @@ export default {
 
                 const mapNasa = new Map({
                     basemap: "topo-vector",
-                    layers: [LayerNasa]
+                    layers: [layerNasa]
                 });
 
                 const mapDesarrolloRural = new Map({
@@ -244,11 +244,11 @@ export default {
     },
     watch: {
 
-        actualAtlas: function (actualAtlas, prevAtlas) {
+        actualAtlas: function (newAtlas, prevAtlas) {
 
-            this.mapView.map = this.maps[actualAtlas - 1];
+            this.mapView.map = this.maps[newAtlas - 1];
 
-            switch (actualAtlas) {
+            switch (newAtlas) {
                 case 4:
                     this.mapView.ui.add(this.widgets[0], "top-right");
                     break;
