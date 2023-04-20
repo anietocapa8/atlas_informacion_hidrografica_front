@@ -7,7 +7,7 @@
       </div>
       <div id="atlas-un-separador" class="atlas-un-separador" @mousedown="startResize"></div>
       <div id="atlas-un-right-container" :style="{ width: rightWidth + 'px' }">
-        <AtlasUNRightPanel id="atlas-un-right-panel" class="atlas-un-right-panel"></AtlasUNRightPanel> 
+        <AtlasUNRightPanel id="atlas-un-right-panel" class="atlas-un-right-panel" :actualAtlas="optionAtlas"></AtlasUNRightPanel>
       </div>
     </div>
   </div>
