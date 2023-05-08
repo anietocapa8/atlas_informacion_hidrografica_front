@@ -3,46 +3,14 @@
 
         <div id="atlas-un-layers" class="atlas-un-layers">
 
-            <button
-                class="atlas-un-layers-list"
-                v-for="layer of activeLayers"
-                v-bind:key="layer.id"
-            >
-                {{layer.title}}
+            <button class="atlas-un-layers-list" v-for="layer of activeLayers" v-bind:key="layer.id">
+                {{ layer.title }}
             </button>
 
         </div>
 
         <div id="atlas-un-layers-content" class="atlas-un-layers-content">
-
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>A</th>
-                    <th>B</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>326</td>
-                    <td>7658</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>345</td>
-                    <td>8766</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>367</td>
-                    <td>3567</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>453</td>
-                    <td>9873</td>
-                </tr>
-            </table>
-
+            <apexchart type="bar" :options="options" :series="series"></apexchart>
         </div>
 
     </div>
@@ -50,11 +18,30 @@
 
 <script>
 import { loadModules } from 'esri-loader'
+import VueApexCharts from 'vue-apexcharts'
+import ApexCharts from 'apexcharts'
+import Vue from 'vue'
+Vue.use(VueApexCharts)
+Vue.component('apexchart', VueApexCharts)
 export default {
     name: 'AtlasUNStats',
     props: ['actualAtlas'],
+    components: { VueApexCharts, ApexCharts },
     data() {
         return {
+            options: {
+                chart: {
+                    id: 'vuechart-example',
+                    background: '#000'
+                },
+                xaxis: {
+                    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+                }
+            },
+            series: [{
+                name: 'series-1',
+                data: [30, 40, 45, 50, 49, 60, 70, 91]
+            }],
             layers: [],
             activeLayers: [],
             mapview: null,
@@ -166,7 +153,7 @@ export default {
                     "services/SIPSDER/Desarrollo_rural/MapServer/"
                 );
 
-                for (let layer = 22; layer > -1 ; layer--) {
+                for (let layer = 22; layer > -1; layer--) {
 
                     const featureLayer = new FeatureLayer({
                         url: `${base_URL}${layer}`,
@@ -198,18 +185,19 @@ export default {
     display: flex;
     overflow-y: scroll;
 }
+
 .atlas-un-layers {
     width: 30%;
-    padding: 10px;
-}
-.atlas-un-layers-content {
-    width: 70%;
     padding: 10px;
 }
 
 .atlas-un-layers-list {
     width: 100%;
     padding: 0.5rem;
+}
 
+.atlas-un-layers-content {
+    width: 70%;
+    padding: 10px;
 }
 </style>
